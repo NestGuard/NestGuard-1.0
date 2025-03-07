@@ -18,8 +18,9 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-      
-
+        
+      - name: Iniciando Deploy...
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 -r ./* root@179.125.68.2:~/    
 
       - name: Iniciando Deploy...
-        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "source ~/venv/bin/activate && cd ~/NestGuardProject && gunicorn --workers 3  --bind 0.0.0.0:8000 --timeout 120  NestGuardProject.wsgi:application"
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "systemctl daemon-reload && systemctl restart gunicorn "
