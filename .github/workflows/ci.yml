@@ -20,8 +20,6 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -p 2020 -H 179.125.68.2 >> ~/.ssh/known_hosts
 
-      - name: Atualizando servidor... 
-        
-      
+
       - name: Iniciando Deploy...
         run: ssh -i ~/.ssh/id_rsa -P 2020 -i ~/.ssh/id_rsa root@179.125.68.2 "source ~/venv/bin/activate && cd ~/NestGuardProject && python manage.py collectstatic && gunicorn --workers 3  --bind 0.0.0.0:8000 --timeout 120  NestGuardProject.wsgi:application"
