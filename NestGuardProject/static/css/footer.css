@@ -8,7 +8,13 @@
     color: #fff; /* Texto branco */
     gap: 20px; /* Espaçamento entre as seções */
 }
-
+.safe-browsing-link img {
+    margin-top: 30px;
+    width: 200px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+}
 .footer-section {
     flex: 1;
     max-width: 300px; /* Define um limite para o tamanho das seções */
