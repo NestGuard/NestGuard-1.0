@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block body %}
+{% include "navbar.html" %}
+
+
+<div class="containerWithAllItensSecurity">
+  
+    <div class="titleSecurity" data-aos="fade-up">
+        <h2>Segurança Digital</h2>
+    </div>
+
+    <div class="containerAllItenInformationSecurity" data-aos="fade-right">
+        <div class="titleInformationSecurity">
+            <h1>Proteção Total para Seu Negócio</h1>
+            <p class="textWithBoldSecurity">Na NestGuard, sabemos que um site seguro não é um luxo, mas uma necessidade. Por isso, nossos serviços são desenvolvidos com tecnologias avançadas para garantir proteção total contra invasões, vazamento de dados e indisponibilidade. </p>
+        </div>
+        
+        <div class="imgSecurity" data-aos="fade-up">
+            <img src="{% static 'img/Padlock.png' %}" alt="Illustration">
+        </div>
+
+    </div>
+
+    <div class="cardsecurity">
+
+        <div class="cards-container">
+            <div class="card"  data-aos="fade-right">
+                <i class="iconsecurity fas fa-lock"></i>
+                <h2>Criptografia de Dados</h2>
+                <p>Criamos sites responsivos, personalizados e otimizados para destacar seu negócio no mercado digital.</p>
+            </div>
+           
+            <div class="card"  data-aos="fade-up">
+                <i class="iconsecurity fas fa-server"></i>      
+                <h2>Alta Disponibilidade</h2>
+                <p>Automatize processos e otimize o atendimento com nossos bots inteligentes e soluções automatizadas.</p>
+            </div>
+
+            <div class="card"  data-aos="fade-left">
+                <i class="iconsecurity fas fa-shield-alt"></i>
+                <h2>Proteção contra Ataques</h2>
+                <p>Oferecemos o melhor custo-benefício do mercado, tornando acessíveis tecnologias de ponta para o seu
+                    negócio.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+  
+</div>
+
+
+{% include "footer.html" %}
+{% endblock %}

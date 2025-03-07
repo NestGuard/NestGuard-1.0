@@ -1,0 +1,57 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+{% include "navbar.html" %}
+
+<div class="containerWithAllItensSolutions" >
+    
+    <div class="headerSolutions" >
+        <div class="titleSolutions" data-aos="fade-up">
+            <h2>Soluções Digitais</h2>
+        </div>
+    
+        <div class="containerAllItenInformationSolutions" data-aos="fade-right">
+            <div class="titleInformationSolutions">
+                <h1>Soluções Digitais Completa para o Seu Negócio Crescer</h1>
+                <p class="textWithBoldSolutions">Nós da NestGuard, oferecemos tudo o que sua empresa precisa para ter uma presença digital forte e eficiente.
+                     Do design à hospedagem, garantimos soluções que ajudam você a vender mais, 
+                    atender melhor seus clientes e automatizar processos para ganhar tempo e dinheiro.</p>
+            </div>
+            
+            <div class="imgSolutions" data-aos="fade-up">
+                <img src="{% static 'img/Device.png' %}" alt="Illustration">
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards de Serviços -->
+    <div class="cards-containerSolutions">
+        <div class="cardSolution" data-aos="fade-right">
+            <i class="iconSolution fas fa-laptop-code"></i>
+            <h2>Criação de Sites e Sistemas</h2>
+            <p>Desenvolvemos sites modernos, rápidos e personalizados para sua empresa, além de sistemas sob medida para tornar seu dia a dia mais produtivo.</p>
+        </div>
+
+        <div class="cardSolution" data-aos="fade-up">
+            <i class="iconSolution fas fa-paint-brush"></i>      
+            <h2>Design Profissional</h2>
+            <p>Seu site ou sistema não apenas funciona bem, mas também atrai e impressiona seus clientes com um visual profissional e intuitivo.</p>
+        </div>
+
+        <div class="cardSolution" data-aos="fade-left">
+            <i class="iconSolution fas fa-server"></i>
+            <h2>Hospedagem Rápida e Segura</h2>
+            <p>Garantimos que seu site fique sempre no ar, carregue rápido e esteja protegido contra ataques, sem dores de cabeça.</p>
+        </div>
+
+        <div class="cardSolution" data-aos="fade-left">
+            <i class="iconSolution fas fa-robot"></i>
+            <h2>Automação e Criação de Bots</h2>
+            <p>Reduza tarefas repetitivas e melhore seu atendimento com soluções automatizadas e bots inteligentes, otimizando seu tempo e aumentando suas vendas.</p>
+        </div>
+    </div>
+
+</div>
+
+{% include "footer.html" %}
+{% endblock %}

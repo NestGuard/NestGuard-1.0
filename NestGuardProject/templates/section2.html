@@ -1,0 +1,19 @@
+{% load static %}
+<div class="custom-section-container">
+    {% for item in homepage %}
+    <div class="custom-content-wrapper">
+        <!-- Imagem ilustrativa -->
+        <div class="custom-image-container"  data-aos="fade-right">
+            <img src="{{ item.imgSection2.url }}" alt="Illustration">
+        </div>
+        <!-- Conteúdo de texto -->
+        <div class="custom-text-container"  data-aos="fade-left">
+            <h2 class="custom-title">{{ item.tituloSection2 }}</h2>
+            <p class="custom-description">
+                {{ item.textoSection2 }}
+            </p>
+            <a href="solucoes" class="custom-button">Conheça Nossas Soluções</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>

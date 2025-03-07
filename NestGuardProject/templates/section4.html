@@ -1,0 +1,22 @@
+{% load static %}
+<div class="custom-section-container">
+    <div class="custom-content-wrapper">
+        <!-- Imagem ilustrativa -->
+         {% for item in homepage %}
+        <div class="custom-image-container" data-aos="fade-right">
+            <img src="{{ item.imgSection4.url }}" alt="Illustration">
+        </div>
+        <!-- Conteúdo de texto -->
+        <div class="custom-text-container" data-aos="fade-left">
+            <h2 class="custom-title">{{ item.tituloSection4 }}</h2>
+            <p class="custom-description">
+                {{ item.textoSection4 }}
+            </p>
+            <a href="seguranca" class="custom-button">Saiba Mais</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+<!-- O CSS DA SECTION 4 É O MESMO QUE O DA SECTION 3 -->

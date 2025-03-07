@@ -1,0 +1,118 @@
+.footer-container {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+    padding: 40px 20px;
+    background-color: #181818; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    gap: 20px; /* Espaçamento entre as seções */
+}
+
+.footer-section {
+    flex: 1;
+    max-width: 300px; /* Define um limite para o tamanho das seções */
+    margin: 10px;
+}
+
+.footer-section h4 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Centraliza os itens da marca */
+}
+
+.footer-logo {
+    width: 50px;
+    height: auto;
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os ícones */
+    justify-content: center; /* Centraliza os ícones */
+}
+
+.footer-social-icons a {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.footer-social-icons a:hover {
+    color: #f5ab00; /* Destaque */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #f5ab00; /* Destaque */
+}
+
+.footer-subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o formulário */
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.subscribe-input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2b2e33; /* Fundo escuro do input */
+    flex: 1;
+    color: #fff;
+    max-width: 200px; /* Define um tamanho máximo para o campo de input */
+}
+.subscribe-input::placeholder {
+    color: #ccc; /* Cor do placeholder */
+}
+
+.subscribe-button {
+    padding: 10px;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.subscribe-button:hover {
+    background-color: #e39a00;
+}

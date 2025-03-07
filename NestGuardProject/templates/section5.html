@@ -1,0 +1,19 @@
+{% load static %}
+<div class="customer-testimonial-section">
+    {% for item in homepage %}
+    <!-- Imagem à esquerda -->
+    <div class="customer-image-container" data-aos="fade-right">
+        <img src="{{ item.imgSection5.url }}" alt="Garantia Icon" class="customer-logo">
+    </div>
+
+    <!-- Texto à direita -->
+    <div class="customer-text-container" data-aos="fade-left">
+        <p class="customer-quote">
+            {{ item.textoSection5 }}
+        </p>
+        <p class="customer-name">{{ item.tituloSection5 }}</p>
+        <p class="customer-association">Confiança e Compromisso</p>
+        <a href="https://wa.me/5511988369677?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20garantia%20da%20NestGuard." class="meet-customers-link">Saiba Mais →</a>
+    </div>
+    {% endfor %}
+</div>

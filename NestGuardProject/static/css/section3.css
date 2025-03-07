@@ -1,0 +1,76 @@
+/* ATENÇÃO 
+ESTE CSS VALE PARA A SECTION 4 E PARA SECTION 3 
+*/
+
+/* ATENÇÃO 
+ESTE CSS VALE PARA A SECTION 4 E PARA SECTION 3 
+*/
+
+
+/* Seção principal */
+.business-stats-section {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente os containers */
+    align-items: center; /* Centraliza verticalmente os containers */
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    gap: 50px; /* Reduz o espaço entre os containers */
+    min-height: 300px; /* Garante altura mínima para centralização */
+  }
+  
+  /* Texto do lado esquerdo */
+  .business-info-container {
+    max-width: 540px;
+  }
+  
+  .business-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .business-title .highlight {
+    color: #f4b400; /* Cor amarela para destacar */
+    font-weight: bold;
+  }
+  
+  .business-description {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Estatísticas do lado direito */
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .stats-row {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  

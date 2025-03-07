@@ -1,0 +1,48 @@
+.containerWithAllItensSecurity{
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+.containerWithAllItensSecurity{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 20px;
+    text-align: left;
+}
+.titleSecurity h2{
+    font-size: 25px;
+    font-weight: 700;
+    color: #F5AB00;
+    margin-bottom: 40px;
+}
+.titleInformationSecurity h1{
+    font-size: 3rem;
+}
+.containerAllItenInformationSecurity {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 170px;
+}
+.imgSecurity{
+    margin-left: 10%;
+}
+.iconsecurity{
+    font-size: 48px;
+    color: #F5AB00;
+    margin-bottom: 31px;
+}
+.cardsecurity{
+    margin-bottom: 5%;
+}
+
+@media screen and (max-width: 768px) {
+.imgSecurity{
+    display: none;
+}
+.titleInformationSecurity h1{
+    font-size: 2rem;
+}
+}

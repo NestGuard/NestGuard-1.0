@@ -1,0 +1,41 @@
+{% load static %}
+<footer class="footer-container">
+    <div class="footer-section footer-brand">
+        <img src="{% static 'img/IconeNestGuard.png' %}" alt="Logo NestGuard" class="footer-logo">
+        <p class="footer-copyright">© Copyright 2025 Nestguard <br>Todos os direitos reservados Nestguard Tecnologia Da Informação LTDA. <br> <br>contato@nestguard.com.br<br>CNPJ 58.976.319/0001-37</p>
+        <div class="footer-social-icons">
+            <a href="https://www.instagram.com/nestguard_/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/nestguard-tecnologia-da-informacao-ltda"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@NestGuard-Aplica%C3%A7%C3%B5esweb"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <div class="footer-section footer-links">
+        <h4 class="footer-heading">Institucional</h4>
+        <ul>
+            <li><a href="sobre_nos">Sobre nós</a></li>
+            <li><a href="https://wa.me/5511988369677?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20NestGuard.">Fale conosco</a></li>
+            <li><a href="https://wa.me/5511988369677?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20preços%20da%20NestGuard.">Preços</a></li>
+            <li><a href="https://www.reclameaqui.com.br/empresa/nestguard-tecnologia-da-informacao-ltda/">Reclame Aqui</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section footer-links">
+        <h4 class="footer-heading">Suporte</h4>
+        <ul>
+            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=suporte@nestguard.com.br">Central de ajuda</a></li>
+            <li><a href="termos-e-condicoes">Termos e condições</a></li>
+            <li><a href="politica-de-privacidade">Política de privacidade</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section footer-subscribe">
+        <h4 class="footer-heading">Mantenha-se atualizado!</h4>
+        <form method="POST" class="subscribe-form">
+            {% csrf_token %}
+            <input type="email" name="email_cliente" placeholder="Seu endereço de e-mail" class="subscribe-input" required>
+            <button type="submit" class="subscribe-button"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+    
+</footer>

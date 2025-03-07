@@ -1,0 +1,42 @@
+{% load static %}
+<div class="carousel-container">
+    {% for item in homepage %}
+    <div class="carousel-content" data-aos="fade-down">
+        <!-- As imagens são carregadas diretamente da pasta static -->
+        <div class="carousel-item">
+            <div class="carousel-text">
+                <h1>Olá, somos a <span>NestGuard</span></h1>
+                <p>{{ item.subtituloCarrosel1 }}</p>
+                <a href="{% url 'orcamento' %}" class="btn-cadastrar">Faça seu orçamento</a>
+
+
+            </div>
+            <img src="{{ item.carrosselImg1.url }}" class="logoNestGuardCarrosel" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-text">
+                <h1>Olá, somos a <span>NestGuard</span></h1>
+                <p>{{ item.subtituloCarrosel2 }}</p>
+                <a href="{% url 'orcamento' %}" class="btn-cadastrar">Faça seu orçamento</a>
+
+            </div>
+            <img src="{{ item.carrosselImg2.url }}" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-text">
+                <h1>Olá, somos a <span>NestGuard</span></h1>
+                <p>{{ item.subtituloCarrosel3 }}</p>
+                <a href="{% url 'orcamento' %}" class="btn-cadastrar">Faça seu orçamento</a>
+
+            </div>
+            <img src="{{ item.carrosselImg3.url }}" alt="Slide 3">
+        </div>
+    </div>
+    <div class="carousel-indicators">
+        <span class="indicator active" data-index="0"></span>
+        <span class="indicator" data-index="1"></span>
+        <span class="indicator" data-index="2"></span>
+    </div>
+
+    {% endfor %}
+</div>
