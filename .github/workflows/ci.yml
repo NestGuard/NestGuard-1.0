@@ -10,18 +10,18 @@ jobs:
     runs-on: ubuntu-latest
  
     steps:
-      - name: Checkout do repositório
+      - name: Checkout do repositório...
         uses: actions/checkout@v3
 
-      - name: Configurar chave SSH
+      - name: Configurando chave SSH...
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -p 2020 -H 179.125.68.2 >> ~/.ssh/known_hosts
 
-      - name: Enviar arquivos via SCP
+      - name: Atualizando servidor... 
         run: scp -i ~/.ssh/id_rsa -P 2020 -r ./* root@179.125.68.2:~/
       
-      - name: Restart Server
-        run: scp -o ~/.ssh/id_rsa -P 2020 -i ~/.ssh/id_rsa root@179.125.68.2 "source ~/venv/bin/activate && cd ~/NestGuardProject && python manage.py collectstatic && gunicorn --workers 3  --bind 0.0.0.0:8000 --timeout 120  NestGuardProject.wsgi:application"
+      - name: Iniciando Deploy...
+        run: ssh -o ~/.ssh/id_rsa -P 2020 -i ~/.ssh/id_rsa root@179.125.68.2 "source ~/venv/bin/activate && cd ~/NestGuardProject && python manage.py collectstatic && gunicorn --workers 3  --bind 0.0.0.0:8000 --timeout 120  NestGuardProject.wsgi:application"
