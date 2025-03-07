@@ -1,7 +1,10 @@
 name: CI/CD - Nestguard
 
 on:
-  push:
+    pull_request:
+      types:
+        - closed
+    
     branches:
       - main
 
