@@ -24,4 +24,4 @@ jobs:
         run: scp -i ~/.ssh/id_rsa -P 2020 -r ./* root@179.125.68.2:~/
 
       - name: Iniciando Deploy...
-        run: ssh -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "source ~/venv/bin/activate && cd ~/NestGuardProject && killall -v -I gunicorn && gunicorn --workers 3  --bind 0.0.0.0:8000 --timeout 120  NestGuardProject.wsgi:application"
+        run: ssh -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "source ~/venv/bin/activate && cd ~/NestGuardProject && killall gunicorn && gunicorn --workers 3  --bind 0.0.0.0:8000 --timeout 120  NestGuardProject.wsgi:application"
