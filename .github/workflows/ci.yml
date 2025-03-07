@@ -19,8 +19,8 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
         
-      - name: Iniciando Deploy...
-        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 -r ./* root@179.125.68.2:~/    
+      - name: Atualizando Servidor...
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -P 2020 -r ./* root@179.125.68.2:~/    
 
       - name: Iniciando Deploy...
         run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "systemctl daemon-reload && systemctl restart gunicorn "
