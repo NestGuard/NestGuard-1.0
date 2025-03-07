@@ -21,7 +21,7 @@ jobs:
           ssh-keyscan -p 2020 -H 179.125.68.2 >> ~/.ssh/known_hosts
 
       - name: Enviar arquivos via SCP
-        run: scp -i ~/.ssh/id_rsa -P 2020 -r ./* root@179.125.68.2:/~
+        run: scp -i ~/.ssh/id_rsa -P 2020 -r ./* root@179.125.68.2:~
       
       - name: Restart Server
         run: scp -o ~/.ssh/id_rsa -P 2020 -i ./* root@179.125.68.2 "cd ~/NestGuardProject && source ~/venv/bin/activate && python manage.py collectstatic && gunicorn --workers 3  --bind 0.0.0.0:8000 --timeout 120  NestGuardProject.wsgi:application"
