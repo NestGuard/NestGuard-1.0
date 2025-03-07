@@ -1,13 +1,14 @@
 name: CI/CD - Nestguard
 
 on:
-    pull_request:
-      types:
-        - closed
+  pull_request:
     
     branches:
       - main
-
+   
+    types:
+      - closed
+      
 jobs:
   deploy:
     if: github.event.pull_request.merged == true
