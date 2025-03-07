@@ -16,12 +16,11 @@ jobs:
       - name: Configurando chave SSH...
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -p 2020 -H 179.125.68.2 >> ~/.ssh/known_hosts
       
       - name: Atualizando servidor... 
-        run: scp -i ~/.ssh/id_rsa -P 2020 -r ./* root@179.125.68.2:~/
+        run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -P 2020 -r ./* root@179.125.68.2:~/
 
       - name: Iniciando Deploy...
-        run: ssh -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "source ~/venv/bin/activate && cd ~/NestGuardProject && killall gunicorn && gunicorn --workers 3  --bind 0.0.0.0:8000 --timeout 120  NestGuardProject.wsgi:application"
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "source ~/venv/bin/activate && cd ~/NestGuardProject && killall gunicorn && gunicorn --workers 3  --bind 0.0.0.0:8000 --timeout 120  NestGuardProject.wsgi:application"
