@@ -1,4 +1,10 @@
-from django.urls import path
+from django.urls import path, re_path
+from . import views
+from .views import *
+
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path, re_path
 from . import views
 from .views import *
 
@@ -11,4 +17,13 @@ urlpatterns = [
     path('termos-e-condicoes', views.termos_e_condicoes, name="termos_e_condicoes"),
     path('seguranca', views.security, name="security"),
     path('solucoes', views.solutions, name="solutions"),
+    path('url-invalida', views.url_invalida, name="url_invalida"),
+
+    # Captura todas as URLs inválidas, exceto arquivos estáticos e mídias
+    re_path(r'^(?!media/|static/).*$', views.url_invalida),
 ]
+
+# Adiciona rotas para servir mídia e arquivos estáticos em DEBUG
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

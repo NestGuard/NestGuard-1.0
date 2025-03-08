@@ -7,6 +7,9 @@ from django.conf import settings
 from .models import EmailCliente
 from .forms import EmailClienteForm
 
+def url_invalida(request):
+    return render(request, 'url-invalida.html')
+
 # Create your views here.
 def homepage(request):
     homepage_data = Homepage.objects.all()

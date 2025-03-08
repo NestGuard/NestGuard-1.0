@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block body %}
+{% include "navbar.html" %}
+
+<style>
+    .error-body {
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .ErrorPage {
+        max-width: 600px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .error-title {
+        font-size: 100px;
+        color: #FFA500;
+        margin: 0;
+    }
+    .error-text {
+        font-size: 18px;
+        margin: 10px 0 20px;
+    }
+    .error-btn {
+        background-color: #FFA500;
+        color: #000;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .error-btn:hover {
+        background-color: #ff8800;
+    }
+</style>
+
+<div class="error-body">
+    <div class="ErrorPage">
+        <h1 class="error-title">404</h1>
+        <p class="error-text">Página não encontrada.</p>
+        <a href="/" class="error-btn">Voltar para a Home</a>
+    </div>
+</div>
+
+{% include "footer.html" %}
+{% endblock %}
