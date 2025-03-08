@@ -7,10 +7,8 @@ on:
       - main
   
 jobs:
-
   deploy:
     runs-on: ubuntu-latest
- 
     steps:
       - name: Checkout do repositório...
         uses: actions/checkout@v3
@@ -20,9 +18,22 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-        
-      - name: Atualizando Servidor...
-        run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -P 2020 -r ./* root@179.125.68.2:~/    
 
-      - name: Iniciando Deploy...
-        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "systemctl daemon-reload && systemctl restart gunicorn "
+      - name: Atualizando código via Git Pull...
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "
+          cd ~/ &&
+          git reset --hard &&
+          git pull origin main"
+
+      - name: Instalando dependências e migrando banco...
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "
+          cd ~/ &&
+          source venv/bin/activate &&
+          pip install -r requirements.txt &&
+          python manage.py migrate &&
+          python manage.py collectstatic --noinput"
+
+      - name: Reiniciando Gunicorn...
+        run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "
+          systemctl daemon-reload &&
+          systemctl restart gunicorn "
