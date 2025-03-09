@@ -36,4 +36,5 @@ jobs:
       - name: Reiniciando Gunicorn...
         run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "
           systemctl daemon-reload &&
-          systemctl restart gunicorn "
+          systemctl restart gunicorn &&
+          systemctl restart nginx"
