@@ -1,0 +1,78 @@
+/* Contêiner principal da seção */
+.custom-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Contêiner para organizar imagem e texto */
+  .custom-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Responsividade */
+    max-width: 1200px;
+    align-items: center;
+    gap: 100px;
+  }
+  
+  /* Estilo do contêiner de imagem */
+  .custom-image-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .custom-image-container img {
+    width: 100%; /* Imagem responsiva */
+    max-width: 400px; /* Tamanho máximo */
+    height: auto;
+  }
+  
+  /* Contêiner de texto */
+  .custom-text-container {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .custom-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .custom-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Botão */
+  .custom-button {
+    display: inline-block;
+    background-color: #ffa500; /* Cor laranja */
+    color: #000000;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .custom-button:hover {
+    background-color: #d49e00;
+  }
+  
+
+
+  @media (max-width: 768px) {
+    .custom-content-wrapper {
+      display: block;
+    }
+    .business-stats-section{
+      display: block;
+      flex-direction: column;
+      align-items: center;
+    }
+  }

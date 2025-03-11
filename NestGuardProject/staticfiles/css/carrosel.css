@@ -1,0 +1,150 @@
+/* Container principal */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+  .backgroundHeader {
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* Gradiente do branco (#ffffff) ao #f8f9fa */
+}
+
+
+  /* Itens do carrossel */
+  .carousel-content {
+    display: flex;
+    margin-top: 5%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .carousel-text a{
+    text-decoration: none;
+  }
+  .carousel-item {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .carousel-text {
+    max-width: 50%;
+    font-family: 'poppins';
+
+  }
+  
+  .carousel-text h1 {
+    font-size: 2.5rem;
+    color: #000;
+  }
+  
+  .carousel-text h1 span {
+    color: #ffa500;
+  }
+  
+  .carousel-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .btn-cadastrar {
+    background-color: #ffa500;
+    border: none;
+    padding: 10px 20px;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-cadastrar:hover {
+    background-color: #e68a00;
+  }
+  
+  /* Indicadores */
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .indicator.active {
+    background-color: #ffa500;
+  }
+  
+  /* Estilo existente permanece inalterado */
+
+/* Ajustes para dispositivos móveis */
+/* Estilo existente permanece inalterado */
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .carousel-container {
+        margin-top: 100px;
+      }
+    /* Ajuste o texto do carrossel */
+    .carousel-text {
+      max-width: 100%;
+      text-align: center;
+      padding: 0 10px;
+    }
+  
+    .carousel-text h1 {
+      font-size: 1.5rem;
+    }
+  
+    .carousel-text p {
+      font-size: 0.9rem;
+    }
+  
+    .btn-cadastrar {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  
+    /* Ajuste das imagens no carrossel */
+    .carousel-item img {
+      max-width: 60%; /* Reduz o tamanho da imagem para telas menores */
+      height: auto; /* Mantém a proporção da imagem */
+      margin: 10px auto; /* Centraliza as imagens */
+      display: block;
+    }
+  
+    /* Itens do carrossel alinhados corretamente */
+    .carousel-item {
+      flex-direction: column; /* Alinha os itens verticalmente */
+      align-items: center;
+    }
+  
+    /* Indicadores no centro */
+    .carousel-indicators {
+      bottom: 5px;
+      gap: 6px;
+    }
+  
+    .indicator {
+      width: 6px;
+      height: 6px;
+    }
+    .logoNestGuardCarrosel{
+      width: 150px;
+      height: 150px;
+    }
+  }
+  

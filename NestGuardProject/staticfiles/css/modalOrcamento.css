@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.registro-orcamento-body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+    height: 100vh;
+}
+
+.registro-orcamento-container {
+    display: flex;
+    width: 90%;
+    height: 700px;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 8px;
+    /* Sombra mais forte e 3D */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 
+                0 4px 6px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+
+.registro-orcamento-sidebar {
+    width: 25%;
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registro-orcamento-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.registro-orcamento-menu {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registro-orcamento-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #ffa500;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffa500;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+.registro-orcamento-button a{
+    text-decoration: none;
+    color: #ffa500;
+}
+
+
+.registro-orcamento-button:hover {
+    color: #000000;
+}
+
+.registro-orcamento-email-button {
+    background-color: #ffa500;
+    color: #000000;
+}
+
+.registro-orcamento-form-container {
+    width: 75%;
+    padding: 20px 40px;
+}
+
+.registro-orcamento-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffa500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.registro-orcamento-title span {
+    font-weight: bold;
+}
+
+.registro-orcamento-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registro-orcamento-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.registro-orcamento-form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.registro-orcamento-form-group input,
+.registro-orcamento-form-group textarea,
+.registro-orcamento-form-group select {
+    padding: 10px;
+    border: 1px solid #ffa500;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000;
+}
+
+.registro-orcamento-form-group textarea {
+    resize: none;
+    height: 80px;
+}
+
+.registro-orcamento-form-group input:focus,
+.registro-orcamento-form-group textarea:focus,
+.registro-orcamento-form-group select:focus {
+    outline: none;
+    border-color: #ffa500;
+}
+
+.registro-orcamento-submit-button {
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.registro-orcamento-submit-button:hover {
+    background-color: #e39a00;
+}
+
+@media screen and (max-width: 768px) {
+    .containerWithAllIensOrcamento{
+        margin-top: 25%;
+        margin-bottom: 250px;
+    }
+    .registro-orcamento-container {
+        flex-direction: column;
+        height: 920px;
+    }
+
+    .registro-orcamento-sidebar {
+        width: 100%;
+    }
+
+    .registro-orcamento-form-container {
+        width: 100%;
+    }
+}

@@ -1,0 +1,83 @@
+#cookies-notice {
+    z-index: 10000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px 12px 0 0;
+    border: 1px solid #ccc;
+    background: linear-gradient(45deg, #f3f3f3, #ffffff);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 24px 16px;
+    animation: slideUp 0.5s ease-in-out;
+    font-family: 'Arial', sans-serif;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+#cookies-notice .content {
+    flex: 0;
+    text-align: center;
+    margin-bottom: 16px; /* Espaço menor entre o texto e os botões */
+}
+
+#cookies-notice .content span {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 600px;
+}
+
+
+#cookies-notice .actions {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 12px; /* Reduz o espaçamento entre os botões */
+    align-items: center;
+    max-width: 300px;
+}
+
+#cookies-notice .actions button {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 12px 20px; /* Ajuste do padding para um tamanho mais compacto */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+#cookies-notice .actions button.reject {
+    border: 1px solid #cc0000;
+    color: #cc0000;
+    background: #fff;
+}
+#cookies-notice .actions button.reject:hover {
+    background-color: #cc0000;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+#cookies-notice .actions button.accept {
+    background-color: #4CAF50;
+    color: #fff;
+}
+#cookies-notice .actions button.accept:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
