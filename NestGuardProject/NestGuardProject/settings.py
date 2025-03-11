@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'AppNestGuard',
-    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
