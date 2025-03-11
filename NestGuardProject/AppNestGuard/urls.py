@@ -7,11 +7,11 @@ from django.urls import path, re_path
 from . import views
 from .views import *
 from django.contrib.sitemaps.views import sitemap
-from .sitemaps import StaticViewSitemap
+from .sitemaps import SimpleSitemap
 
 
 sitemaps = {
-    'static': StaticViewSitemap(),  # Instanciando corretamente
+    'static': SimpleSitemap(),  # Use o SimpleSitemap aqui
 }
 
 urlpatterns = [
@@ -24,10 +24,10 @@ urlpatterns = [
     path('seguranca', views.security, name="security"),
     path('solucoes', views.solutions, name="solutions"),
     path('url-invalida', views.url_invalida, name="url_invalida"),
-
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
     # Captura todas as URLs inválidas, exceto arquivos estáticos e mídias
     re_path(r'^(?!media/|static/).*$', views.url_invalida),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    
 ]
 
 # Adiciona rotas para servir mídia e arquivos estáticos em DEBUG

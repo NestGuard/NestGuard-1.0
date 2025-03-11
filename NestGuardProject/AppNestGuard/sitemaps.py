@@ -1,24 +1,23 @@
 from django.contrib.sitemaps import Sitemap
 from django.urls import reverse
 
-class StaticViewSitemap(Sitemap):
-    priority = 0.5
-    changefreq = 'daily'
 
+
+
+
+class SimpleSitemap(Sitemap):
     def items(self):
         return [
-            'homepage',
-            'orcamento',
-            'registro_orcamento',
-            'aboutUs',
-            'politica_de_privacidade',
-            'termos_e_condicoes',
-            'security',
-            'solutions',
+            'homepage',  # Página inicial
+            'orcamento',  # Página de orçamento
+            'aboutUs',  # Sobre nós
+            'politica_de_privacidade',  # Política de privacidade
+            'termos_e_condicoes',  # Termos e condições
+            'security',  # Segurança
+            'solutions',  # Soluções
+            'url_invalida',  # URL inválida
+            
         ]
+
     def location(self, item):
-        try:
-            return reverse(item)
-        except Exception as e:
-            print(f"Erro no reverse({item}): {e}")
-            return '/'
+        return reverse(item)  # Gera a URL completa a partir do nome
