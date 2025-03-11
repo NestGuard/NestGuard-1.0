@@ -27,7 +27,7 @@ jobs:
 
       - name: Instalando dependências e migrando banco...
         run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "
-          cd ~/NestGuard-1.0 &&
+          cd ~/NestGuard-1.0/NestGuardProject &&
           source ~/venv/bin/activate &&
           pip install -r requirements.txt &&
           python manage.py migrate &&
@@ -36,4 +36,5 @@ jobs:
       - name: Reiniciando Gunicorn...
         run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -p 2020 root@179.125.68.2 "
           systemctl daemon-reload &&
-          systemctl restart gunicorn "
+          systemctl restart gunicorn &&
+          systemctl restart nginx"
