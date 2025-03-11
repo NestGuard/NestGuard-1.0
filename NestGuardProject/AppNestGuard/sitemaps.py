@@ -16,7 +16,6 @@ class StaticViewSitemap(Sitemap):
             'security',
             'solutions',
         ]
-
     def location(self, item):
         try:
             return reverse(item)
