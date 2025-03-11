@@ -1,17 +1,19 @@
 from django.urls import path, re_path
 from . import views
 from .views import *
-from .views import StaticViewSitemap
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, re_path
 from . import views
 from .views import *
 from django.contrib.sitemaps.views import sitemap
+from .sitemaps import StaticViewSitemap
+
 
 sitemaps = {
-    'static': StaticViewSitemap,
+    'static': StaticViewSitemap(),  # Instanciando corretamente
 }
+
 urlpatterns = [
     path('', views.homepage, name="homepage"),    
     path('orcamento', views.orcamento, name="orcamento"),
@@ -25,7 +27,7 @@ urlpatterns = [
 
     # Captura todas as URLs inválidas, exceto arquivos estáticos e mídias
     re_path(r'^(?!media/|static/).*$', views.url_invalida),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 ]
 
 # Adiciona rotas para servir mídia e arquivos estáticos em DEBUG
