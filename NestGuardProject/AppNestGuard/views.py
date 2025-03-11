@@ -5,6 +5,8 @@ from .forms import OrcamentoForm
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import EmailCliente
+from django.contrib.sitemaps import Sitemap
+from django.urls import reverse
 from .forms import EmailClienteForm
 
 def url_invalida(request):
@@ -118,3 +120,22 @@ def registro_orcamento(request):
 
     return render(request, 'registro_orcamento.html', {'form': form})
 
+
+class StaticViewSitemap(Sitemap):
+    priority = 0.5
+    changefreq = 'daily'
+
+    def items(self):
+        return [
+            'homepage',
+            'orcamento',
+            'registro_orcamento',
+            'aboutUs',
+            'politica_de_privacidade',
+            'termos_e_condicoes',
+            'security',
+            'solutions',
+        ]
+
+    def location(self, item):
+        return reverse(item)
