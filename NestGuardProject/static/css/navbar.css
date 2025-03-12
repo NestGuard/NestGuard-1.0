@@ -42,7 +42,7 @@ body {
 }
   
 .logo-component img{
-    width: 48.8px;
+    width: auto;
     height: 60px;
 }
 

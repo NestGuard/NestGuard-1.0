@@ -11,7 +11,10 @@
     background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* Gradiente do branco (#ffffff) ao #f8f9fa */
 }
 
-
+.logoNestGuardCarrosel{
+  height: 400px;
+  width: auto;
+}
   /* Itens do carrossel */
   .carousel-content {
     display: flex;
@@ -143,8 +146,8 @@
       height: 6px;
     }
     .logoNestGuardCarrosel{
-      width: 150px;
-      height: 150px;
+      width: auto;
+      height: 100px;
     }
   }
   

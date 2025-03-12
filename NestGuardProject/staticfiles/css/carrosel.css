@@ -87,7 +87,10 @@
   .indicator.active {
     background-color: #ffa500;
   }
-  
+  .logoNestGuardCarrosel{
+    height: 400px;
+    width: auto;
+  }
   /* Estilo existente permanece inalterado */
 
 /* Ajustes para dispositivos móveis */
@@ -143,8 +146,8 @@
       height: 6px;
     }
     .logoNestGuardCarrosel{
-      width: 150px;
-      height: 150px;
+      width: auto;
+      height: 100px;
     }
   }
   
