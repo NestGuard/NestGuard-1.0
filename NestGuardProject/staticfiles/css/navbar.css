@@ -42,9 +42,10 @@ body {
 }
   
 .logo-component img{
-  width: auto;
-  height: 60px;
+    width: auto;
+    height: 60px;
 }
+
 
   .logo {
     font-size: 24px;
