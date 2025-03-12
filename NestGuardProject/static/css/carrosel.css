@@ -12,7 +12,7 @@
 }
 
 .logoNestGuardCarrosel{
-  height: 400px;
+  height: 300px;
   width: auto;
 }
   /* Itens do carrossel */
@@ -123,7 +123,7 @@
   
     /* Ajuste das imagens no carrossel */
     .carousel-item img {
-      max-width: 60%; /* Reduz o tamanho da imagem para telas menores */
+      max-width: 50%; /* Reduz o tamanho da imagem para telas menores */
       height: auto; /* Mantém a proporção da imagem */
       margin: 10px auto; /* Centraliza as imagens */
       display: block;
@@ -146,8 +146,8 @@
       height: 6px;
     }
     .logoNestGuardCarrosel{
-      width: auto;
       height: 100px;
+      width: auto;
     }
   }
   
