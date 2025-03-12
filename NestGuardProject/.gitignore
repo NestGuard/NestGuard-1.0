@@ -1,5 +1,4 @@
 staticfiles
-NestGuardProject/urls.py
 
 /NestGuardProject/media
 /NestGuardProject/__pycache__
