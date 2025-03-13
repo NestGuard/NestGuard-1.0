@@ -5,7 +5,7 @@
     padding: 30px;
     border-radius: 10px;
     margin-top: 5%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 .container.politicServiceNestguard h1 {
     text-align: center;
@@ -37,4 +37,15 @@
     margin-top: 20px;
     font-size: 14px;
     color: #666;
+}
+
+@media screen and (max-width: 1100px) {
+    .container.politicServiceNestguard {
+        margin-top: 10%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container.politicServiceNestguard {
+        margin-top: 25%;
+    }
 }
