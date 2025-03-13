@@ -17,6 +17,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <meta name="google-site-verification" content="0nDTxnE7FiUj-6kd4I2NAUZasLwmkApQAaFcUSnKuXo" />
+    <script>
+        function loadScript(a) {
+            var b = document.getElementsByTagName("head")[0],
+                c = document.createElement("script");
+            c.type = "text/javascript";
+            c.src = "https://tracker.metricool.com/resources/be.js";
+            c.onreadystatechange = a;
+            c.onload = a;
+            b.appendChild(c);
+        }
+        loadScript(function() {
+            beTracker.t({ hash: "56064bd1ad5fa3930ed435d8af3251c5" });
+        });
+    </script>
 </head>
 
 <body class="main">
